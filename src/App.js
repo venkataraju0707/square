@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.container}>
+      <h1 style={styles.title}>Square & Circle</h1>
+
+      
+      <div className="square" style={styles.square}>
+        
+        <div className="circle" style={styles.circle}></div>
+      </div>
     </div>
   );
 }
 
-export default App;
+const styles = {
+  container: {
+    textAlign: "center",
+    marginTop: "40px",
+    fontFamily: "Arial, sans-serif",
+  },
+  title: {
+    marginBottom: "30px",
+    fontSize: "32px",
+    fontWeight: "bold",
+  },
+  square: {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#3498db",
+    margin: "0 auto",
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  circle: {
+    width: "120px",
+    height: "120px",
+    backgroundColor: "#e74c3c",
+    borderRadius: "50%",
+  },
+};
